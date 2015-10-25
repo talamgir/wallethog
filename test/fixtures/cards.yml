@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cardnum: 1
+  cardtype: 1
+  seccode: 1
+  expmonth: 1
+  expyear: 2015-10-24 00:26:24
+
+two:
+  cardnum: 1
+  cardtype: 1
+  seccode: 1
+  expmonth: 1
+  expyear: 2015-10-24 00:26:24
