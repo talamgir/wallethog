@@ -9,15 +9,13 @@ class User < ActiveRecord::Base
 
 	before_save :email_lowercase, :phoneform
 
+private
 	def email_lowercase
-		emaildowncase = self.email.to_s.downcase!
-		self.email = emaildowncase
-		self.save
+		self.email = email.to_s.downcase!	
 	end
 
+private
 	def phoneform
-		number = self.phone.gsub!(/\D/,' '=>'-')
-		self.phone = number
-		self.save
+		self.phone = phone.gsub!(/\D/,' '=>'-')
 	end
 end

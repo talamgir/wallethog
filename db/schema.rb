@@ -11,17 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025045030) do
+ActiveRecord::Schema.define(version: 20151026042206) do
 
   create_table "cards", force: :cascade do |t|
     t.integer  "seccode"
     t.integer  "expmonth"
-    t.datetime "expyear"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "cardnum"
-    t.string   "cardtype"
+    t.integer  "expyear"
   end
+
+  create_table "user_cards", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "card_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_cards", ["card_id"], name: "index_user_cards_on_card_id"
+  add_index "user_cards", ["user_id"], name: "index_user_cards_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email"

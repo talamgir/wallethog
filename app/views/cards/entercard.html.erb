@@ -1,0 +1,18 @@
+<div>
+<%= form_for @card do |f| %>
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+  <% end %>
+<p>Enter Card Number</p> <%= f.text_field :cardnum %>
+<br />
+<p>Enter Security Code </p> <%= f.text_field :seccode %>
+<br />
+<p>Enter Expiry Month </p> <%= f.text_field :expmonth %>
+<br />
+<p>Enter Expiry Year</p> <%= f.text_field :expyear %>
+<br />
+<%= submit_tag "Add Card" %>
+<% end %>
+</div>
+
+

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'cards/entercard'
+
+  get 'cards/cardentered'
+
+  get 'users/form'
+
+  get 'users/confirmation'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +61,14 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get "form" => "users#form", :as => "form"
+  post "create" => "users#create"
+  get "confirmation" => "users#confirmation"
+  get "entercard" => "cards#entercard"
+  post "create" => "cards#create"
+  get "cardentered" => "cards#cardentered"
+ 
+   resources :users 
+   resources :cards
 end
