@@ -47,3 +47,4 @@ end
 
 gem "pry-rails"
 gem "awesome_print"
+gem "paperclip"
