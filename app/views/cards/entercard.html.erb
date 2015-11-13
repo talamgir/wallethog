@@ -10,7 +10,7 @@
 	<br />
 	<p>Enter Expiry Year</p> <%= f.text_field :expyear %>
 	<br />
-	<%= submit_tag "Add Card" %>
+	<%= f.submit "Add Card" %>
 
 	<% if flash[:alert] %>
     <div class="alert"><%= flash[:alert] %></div>
