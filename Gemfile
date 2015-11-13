@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -48,3 +50,4 @@ end
 gem "pry-rails"
 gem "awesome_print"
 gem "paperclip"
+gem "factory_girl_rails"
